@@ -102,7 +102,7 @@ class NotesApp:
         for note_id, note_info in self.notes.items():
             self.listbox_notes.insert(tk.END, f"{note_id}: {note_info['title']}")
 
-    def load_selected_note(self):
+    def load_selected_note(self, event):
         selection = self.listbox_notes.curselection()
         if selection:
             index = selection[0]
@@ -178,7 +178,7 @@ class NotesApp:
         else:
             messagebox.showwarning("Ошибка", "Заголовок и тело заметки не должны быть пустыми")
 
-    def change_image(self):
+    def change_image(self, event):
         global key
         global cipher
 
