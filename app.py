@@ -39,7 +39,7 @@ class NotesApp:
         self.current_note_id = None
 
         image = Image.open("logo.jpg")
-        image = image.resize((100, 100))
+        image = image.resize((150, 150))
         photo = ImageTk.PhotoImage(image)
 
         label = tk.Label(root, image=photo)
